@@ -163,7 +163,7 @@ function optionsController:onInit()
 end
 
 function toggleStore()
-    if  g_game.getFeature(GameIngameStore) and g_game.getClientVersion() > 1310 then
+    if  g_game.getFeature(GameIngameStore) then
         modules.game_store.toggle() -- cipsoft packets
     else
         modules.game_shop.toggle() -- custom from v8
