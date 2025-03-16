@@ -678,9 +678,9 @@ function setupHotkeys()
                 elseif slot.useType == 'useOnSelf' then
                     modules.game_hotkeys.executeHotkeyItem(HOTKEY_USEONSELF, slot.itemId, slot.subType)
                 elseif slot.useType == 'equip' then
-                    --local item = g_game.findPlayerItem(slot.itemId, -1, slot.getTier)
                     local item = Item.create(slot.itemId)
                     if item then
+                        item:setTier(slot.getTier)
                         g_game.equipItem(item)
                     end
                 end
@@ -722,9 +722,9 @@ function setupHotkeys()
                     elseif slot.useType == 'useOnSelf' then
                         modules.game_hotkeys.executeHotkeyItem(HOTKEY_USEONSELF, slot.itemId, slot.subType)
                     elseif slot.useType == 'equip' then
-                        --local item = g_game.findPlayerItem(slot.itemId, -1, slot.getTier)
                         local item = Item.create(slot.itemId)
                         if item then
+                            item:setTier(slot.getTier)
                             g_game.equipItem(item)
                         end
                     end
