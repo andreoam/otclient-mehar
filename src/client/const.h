@@ -29,9 +29,9 @@ namespace Otc
     enum OperatingSystem_t : uint16_t
     {
         CLIENTOS_NONE = 0,
-        CLIENTOS_OTCLIENT_LINUX = 10,
-        CLIENTOS_OTCLIENT_WINDOWS = 11,
-        CLIENTOS_OTCLIENT_MAC = 12,
+        CLIENTOS_OTCLIENT_LINUX = 4,
+        CLIENTOS_OTCLIENT_WINDOWS = 5,
+        CLIENTOS_OTCLIENT_MAC = 6,
     };
 
     enum Operation : uint8_t
